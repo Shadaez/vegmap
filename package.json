@@ -1,0 +1,19 @@
+{
+  "name": "vegmap",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shadaez/vegmap.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shadaez/vegmap/issues"
+  },
+  "homepage": "https://github.com/Shadaez/vegmap"
+}

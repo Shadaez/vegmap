@@ -1,0 +1,27 @@
+model
+name
+images
+long_description
+short_description
+price_range
+veg_level_description
+address
+		{{address1}}<br>
+		{{address2}}<br>
+		{{city}}, {{region}} {{postal_code}}<br>
+		{{country}}
+hours
+	{{if hours}}
+		{{each hours}}
+			{{each hours}}
+				<p>{{hours}}</p>
+			{{/each}}
+			{{each days}}
+				<p>{{day}}</p>
+			{{/each}}
+		{{/each}}
+	{{/if}}ls
+	
+
+phone
+website	

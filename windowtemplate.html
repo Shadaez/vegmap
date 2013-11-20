@@ -1,0 +1,44 @@
+<h3>{{name}}</h3>
+
+{{if images}}
+	<img src="{{images[0]}}"></img>
+{{/if}}
+<p>{{veg_level_description}}</p>
+{{if long_description}}
+	{{long_description}}
+{{/if}}
+
+{{unless long_description}}
+	<p>{{short_description}}</p>
+{{/unless}}
+
+{{#if price_range}}
+	<p>{{price_range}}</p>
+{{/if}}
+
+{{#if address}}
+	<p>
+		{{address1}}<br>
+		{{address2}}<br>
+		{{city}}, {{region}} {{postal_code}}<br>
+		{{country}}
+	</p>
+{{/if}}
+
+{{if hours}}
+	{{each hours}}
+		{{each hours}}
+			<p>{{hours}}</p>
+		{{/each}}
+		{{each days}}
+			<p>{{day}}</p>
+		{{/each}}
+	{{/each}}
+{{/if}}
+
+{{#if phone}}
+	<p>{{phone}}<p>
+{{/if}}
+{{if website}}
+	<a href="{{url}}">{{url}}</a>
+{{/if}}
