@@ -1,0 +1,34 @@
+html, body, #map-canvas{
+	height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#map-canvas{
+	visibility: hidden;
+}
+
+#start{
+	background-color: white;
+	visibility: visible;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+article {
+	position: relative;
+	padding: 10px;
+	top: 5%;
+	width: 500px;
+	margin: auto;
+	display: block;
+	border: 2px black solid;
+	border-radius: 10px;
+}
+
+input {
+	width: 400px;
+}
