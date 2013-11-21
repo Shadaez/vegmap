@@ -1,7 +1,8 @@
 var http = require('http');
 var path = require("path"),
     _ = require("underscore"),
-    $ = require("jquery-cli");
+    $ = require("jquery"),
+    express = require("express");
 
 
 var app = express()
@@ -17,20 +18,18 @@ app.post("/places", function(req, res) {
   var position = req.body.latitude + ',' + req.body.longitude;
   var URI = "http://www.vegguide.org/search/by-lat-long/" + position;
   $.get(URI, function(response){
-    console.log(response);
     var entries = [];
     _.each(response.entries, function(entry){
       var address = '';
       var entry_stripped = {
         name: entry.name,
-        long_description: entry.long_description.text/html,
         short_description: entry.short_description,
         price_range: entry.price_range,
         veg_level_description: entry.veg_level_description,
-        phone: phone,
-        website: website,
+        website: entry.website,
+   phone: entry.phone,
+        long_description: entry.long_description
       };
-
       if(entry.address1){
         address += entry.address1;
       }
@@ -64,31 +63,3 @@ app.post("/places", function(req, res) {
 var port = process.env.PORT || 3000;
 app.listen(port);
 console.log("The server is now listening on port %s", port);
-
-/*model
-name
-images
-long_description
-short_description
-price_range
-veg_level_description
-address
-    {{address1}}<br>
-    {{address2}}<br>
-    {{city}}, {{region}} {{postal_code}}<br>
-    {{country}}
-hours
-  {{if hours}}
-    {{each hours}}
-      {{each hours}}
-        <p>{{hours}}</p>
-      {{/each}}
-      {{each days}}
-        <p>{{day}}</p>
-      {{/each}}
-    {{/each}}
-  {{/if}}ls
-  
-
-phone
-website */
