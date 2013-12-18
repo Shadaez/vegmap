@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>INDED</title>
+    <title>vegmap</title>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src ="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgb5qHFDfhGmUFXM8aCX4BpRMUtA6BZuU&sensor=false"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
     <script src="/js/bb.js"></script>
     <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
     <div id="map-canvas">
     </div>
     <div id="start">
-      <article>
+      <div id="loading">
+        <p><i class="fa fa-2x fa-spinner fa-spin"></i></p>
+      </div>
+      <div id="search">
         <h2>Search for vegetarian resteraunts in your area.</h2>
         <form id="form">
           <input id="loc" type="text" placeholder="Location">
         </form>
-      </article>
+      </div>
     </div>
   </body>
 </html>

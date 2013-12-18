@@ -1,14 +1,16 @@
 html, body, #map-canvas{
-	height: 100%;
+  height: 100%;
   margin: 0px;
   padding: 0px;
 }
 
+
+
 #map-canvas{
-	visibility: hidden;
+	visibility: visible;
 }
 
-#start{
+#start {
 	background-color: white;
 	visibility: visible;
 	position: absolute;
@@ -18,7 +20,16 @@ html, body, #map-canvas{
 	width: 100%;
 }
 
-article {
+#loading{
+	position: relative;
+	display: none;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	top: 5%;
+}
+
+#search {
 	position: relative;
 	padding: 10px;
 	top: 5%;

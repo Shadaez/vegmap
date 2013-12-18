@@ -5,11 +5,25 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src ="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
-    <script src="/js/bb.js"></script>
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgb5qHFDfhGmUFXM8aCX4BpRMUtA6BZuU&sensor=FALSE"></script>
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgb5qHFDfhGmUFXM8aCX4BpRMUtA6BZuU&sensor=false"></script>
+    <script src="/js/bb.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" type="text/css">
   </head>
   <body>
-  
+    <div id="map-canvas">
+    </div>
+    <div id="start">
+      <div id="search">
+        <h2>Search for vegetarian resteraunts in your area.</h2>
+        <form id="form">
+          <input id="loc" type="text" placeholder="Location">
+        </form>
+      </div>
+      <div id="loading">
+        <i class="fa-li fa fa-spinner fa-spin"></i>
+      </div>
+    </div>
   </body>
 </html>
