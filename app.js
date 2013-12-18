@@ -27,7 +27,12 @@ app.get("/places/:addr", function(req, res) {
         price_range: entry.price_range,
         veg_level_description: entry.veg_level_description,
         website: entry.website,
+<<<<<<< HEAD
         phone: entry.phone,
+=======
+   phone: entry.phone,
+        long_description: entry.long_description
+>>>>>>> d0557731711c66518c8b47582359daa8de6ce32f
       };
       if(entry.address1){
         address += entry.address1;
